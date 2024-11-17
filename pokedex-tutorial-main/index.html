@@ -1,0 +1,97 @@
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic setup for character encoding and responsiveness -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the webpage -->
+    <title>Pokedex</title>
+    <!-- Linking the stylesheet for consistent design -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Linking JavaScript files for handling data and search functionality -->
+    <script src="./pokemon.js" defer></script>
+    <script src="./search.js" defer></script>
+  </head>
+  <body>
+    <!-- Main content area for the homepage -->
+    <main class="main">
+      <!-- Header section with branding and search functionality -->
+      <header class="header home">
+        <div class="container">
+          <div class="logo-wrapper">
+            <!-- Pokédex logo for branding -->
+            <img src="./assets/pokeball.svg" alt="pokeball" />
+            <h1>Pokedex</h1>
+          </div>
+          <!-- Search bar and sorting options -->
+          <div class="search-wrapper">
+            <div class="search-wrap">
+              <!-- Search icon and input field -->
+              <img
+                src="./assets/search.svg"
+                alt="search icon"
+                class="search-icon" />
+              <input
+                type="text"
+                class="search-input body3-fonts"
+                placeholder="Search"
+                id="search-input" />
+              <!-- Cross icon to clear the search field -->
+              <img
+                src="./assets/cross.svg"
+                alt="cross icon"
+                class="search-close-icon"
+                id="search-close-icon" />
+            </div>
+            <!-- Sorting options for better user experience -->
+            <div class="sort-wrapper">
+              <div class="sort-wrap">
+                <!-- Sorting icon to indicate functionality -->
+                <img
+                  src="./assets/sorting.svg"
+                  alt="sorting"
+                  class="sort-icon"
+                  id="sort-icon" />
+              </div>
+              <div class="filter-wrapper">
+                <!-- Filters for sorting Pokémon by number or name -->
+                <p class="body2-fonts">Sort by:</p>
+                <div class="filter-wrap">
+                  <div>
+                    <input
+                      type="radio"
+                      id="number"
+                      name="filters"
+                      value="number"
+                      checked />
+                    <label for="number" class="body3-fonts">Number</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="name" name="filters" value="name" />
+                    <label for="name" class="body3-fonts">Name</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Section to display the list of Pokémon -->
+      <section class="pokemon-list">
+        <div class="container">
+          <!-- Wrapper to dynamically populate Pokémon cards -->
+          <div class="list-wrapper"></div>
+        </div>
+        <!-- Message displayed when a Pokémon is not found -->
+        <div id="not-found-message">Pokemon not found</div>
+      </section>
+    </main>
+    <!-- Adding my name in the footer sec-->
+
+    <footer>
+      <p class="footer-text">Made by Karthik PB</p>
+    </footer>
+  </body>
+</html>
